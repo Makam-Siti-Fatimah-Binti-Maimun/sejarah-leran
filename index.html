@@ -3,138 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Siti Fatimah binti Maimun - Digital Guide Leran</title>
+    <title>Situs Sejarah Leran - Digital Guide</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        html { scroll-behavior: smooth; }
-        .glass-effect { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); }
-        .hero-gradient { background: linear-gradient(rgba(6, 78, 59, 0.8), rgba(6, 78, 59, 0.9)); }
+        /* Perbaikan bug CSS: Menambahkan selector html */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .glass-effect { 
+            background: rgba(255, 255, 255, 0.9); 
+            backdrop-filter: blur(10px); 
+        }
+
+        /* Menghilangkan scrollbar pada menu navigasi */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800 antialiased font-sans">
+<body class="bg-gray-100 text-gray-800 antialiased font-sans">
 
     <nav class="sticky top-0 z-50 glass-effect border-b border-gray-200">
-        <div class="max-w-screen-md mx-auto px-4 py-2 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <div class="w-10 h-10 bg-gray-200 rounded flex items-center justify-center text-[8px] text-center p-1 text-gray-500 border border-gray-300">
-                    LOGO UTM
-                </div>
-                <div class="w-10 h-10 bg-gray-200 rounded flex items-center justify-center text-[8px] text-center p-1 text-gray-500 border border-gray-300">
-                    LOGO KKN
+        <div class="max-w-screen-md mx-auto px-4 py-3">
+            <div class="flex items-center justify-between mb-3">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-gray-200 rounded flex items-center justify-center text-[7px] text-gray-500 border border-gray-300">LOGO UTM</div>
+                    <div class="w-8 h-8 bg-gray-200 rounded flex items-center justify-center text-[7px] text-gray-500 border border-gray-300">LOGO KKN</div>
+                    <span class="font-extrabold text-emerald-800 text-xl tracking-tight ml-1">LeranDigital</span>
                 </div>
             </div>
-            <div class="flex space-x-4 text-xs font-bold uppercase tracking-wider text-emerald-800">
-                <a href="#home">Home</a>
-                <a href="#biografi">Biografi</a>
-                <a href="#info">Info</a>
+
+            <div class="flex space-x-5 overflow-x-auto no-scrollbar pb-1 border-t border-gray-100 pt-3 text-[11px] font-black uppercase tracking-widest text-gray-500">
+                <a href="#biografi" class="hover:text-emerald-700 whitespace-nowrap">Biografi</a>
+                <a href="#sejarah" class="hover:text-emerald-700 whitespace-nowrap">Sejarah</a>
+                <a href="#arsitektur" class="hover:text-emerald-700 whitespace-nowrap">Arsitektur</a>
+                <a href="#makam-panjang" class="hover:text-emerald-700 whitespace-nowrap">Makam Panjang</a>
             </div>
         </div>
     </nav>
 
     <main id="home" class="max-w-screen-md mx-auto pb-20">
 
-        <section class="relative h-72 flex items-center justify-center text-center px-6 overflow-hidden">
-            <div class="absolute inset-0 bg-emerald-900">
-                <div class="w-full h-full bg-gray-300 flex items-center justify-center text-gray-400 italic">
-                    [Gambar Utama: Cungkup Makam Siti Fatimah]
-                </div>
-                <div class="absolute inset-0 hero-gradient"></div>
-            </div>
+        <section class="relative h-64 bg-emerald-900 flex items-center justify-center text-center px-6">
+            <div class="absolute inset-0 bg-black opacity-40"></div>
             <div class="relative z-10 text-white">
-                <h1 class="text-3xl font-extrabold mb-1 tracking-tight">Siti Fatimah binti Maimun</h1>
-                <p class="text-emerald-200 italic text-sm font-light">Putri Retno Suwari (Wafat 1082 M)</p>
+                <h1 class="text-3xl font-extrabold mb-2">Siti Fatimah binti Maimun</h1>
+                <p class="text-emerald-100 italic text-sm font-light tracking-wide">Jejak Islam Tertua di Nusantara (1082 M)</p>
             </div>
         </section>
 
         <section class="px-4 -mt-10 relative z-20">
-            <div class="bg-white rounded-2xl shadow-xl p-5 flex items-center justify-between border-l-8 border-emerald-600">
+            <div class="bg-white rounded-2xl shadow-xl p-6 flex items-center justify-between border-l-8 border-emerald-500">
                 <div>
                     <h3 class="font-bold text-lg text-emerald-900 leading-tight">Audio Guide</h3>
                     <p class="text-xs text-gray-500">Dengar narasi sejarah di lokasi</p>
                 </div>
-                <button onclick="alert('Audio Guide Segera Hadir!')" class="bg-emerald-600 hover:bg-emerald-700 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition transform hover:scale-105">
-                    <i class="fas fa-play text-xl"></i>
+                <button onclick="alert('Fitur Audio Segera Hadir!')" class="bg-emerald-600 hover:bg-emerald-700 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition transform hover:scale-105">
+                    <i class="fas fa-play"></i>
                 </button>
             </div>
         </section>
 
-        <section class="grid grid-cols-2 gap-3 px-4 mt-6">
-            <div class="bg-white p-4 rounded-xl shadow-sm border border-emerald-50">
+        <section class="grid grid-cols-2 gap-4 px-4 mt-6">
+            <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
                 <span class="block text-[10px] text-gray-400 uppercase font-black mb-1">Tahun Wafat</span>
-                <span class="text-xl font-bold text-emerald-700">1082 M <span class="text-xs font-normal text-gray-400">(475 H)</span></span>
+                <span class="text-xl font-bold text-emerald-700">1082 M</span>
             </div>
-            <div class="bg-white p-4 rounded-xl shadow-sm border border-emerald-50">
+            <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
                 <span class="block text-[10px] text-gray-400 uppercase font-black mb-1">Status Situs</span>
-                <span class="text-sm font-bold text-emerald-700 uppercase">Cagar Budaya</span>
+                <span class="text-xs font-bold text-emerald-700 uppercase leading-tight">Cagar Budaya Nasional</span>
             </div>
         </section>
 
         <section id="biografi" class="px-4 mt-10">
             <h2 class="text-xl font-bold mb-4 flex items-center text-emerald-900">
-                <i class="fas fa-scroll mr-2 text-emerald-600"></i> Biografi Sang Putri
+                <i class="fas fa-user-graduate mr-2 text-emerald-600"></i> Biografi Lengkap
             </h2>
-            
-            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-                <div class="p-6 space-y-6">
-                    <div>
-                        <h3 class="font-bold text-emerald-800 text-sm mb-2 uppercase tracking-wide">Asal-Usul & Silsilah</h3>
-                        <p class="text-sm text-gray-600 leading-relaxed">
-                            Siti Fatimah binti Maimun lahir pada tahun **1064 M**. Beliau adalah putri dari **Sultan Mahmud Syah Alam** (Syekh Maimun) asal Kedah atau Persia, dan ibunya bernama **Siti Aminah** asal Aceh. Beliau juga dikenal luas dengan nama **Putri Retno Suwari**.
-                        </p>
-                    </div>
+            <div class="bg-white rounded-2xl p-6 shadow-sm space-y-6">
+                <div>
+                    <h4 class="font-bold text-emerald-800 text-xs mb-2 uppercase tracking-widest">Asal-Usul & Silsilah</h4>
+                    <p class="text-sm text-gray-600 leading-relaxed text-justify">
+                        Siti Fatimah binti Maimun lahir pada tahun 1064 M. Beliau merupakan putri dari Sultan Mahmud Syah Alam (Syekh Maimun) asal Kedah atau Persia dan Siti Aminah asal Aceh. Dalam tradisi lokal, beliau dikenal dengan nama Putri Retno Suwari.
+                    </p>
+                </div>
+                <div class="bg-emerald-50 p-5 rounded-xl border-l-4 border-emerald-500">
+                    <h4 class="font-bold text-emerald-800 text-xs mb-1 uppercase tracking-wider">Misi & Wafat</h4>
+                    <p class="text-xs text-gray-700 leading-relaxed italic">
+                        Beliau datang ke Jawa bersama rombongan ayahandanya untuk misi dakwah dan diplomasi. Beliau wafat di usia muda (sekitar 18 tahun) akibat wabah penyakit yang melanda rombongan.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-emerald-800 text-xs mb-2 uppercase tracking-widest">Para Pengikut</h4>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        Di dalam cungkup utama, beliau dimakamkan berdampingan dengan 4 dayang setianya: Putri Seruni, Putri Keling, Putri Kucing, dan Putri Kamboja.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-                    <div class="bg-emerald-50 p-4 rounded-xl border-l-4 border-emerald-500">
-                        <h3 class="font-bold text-emerald-900 text-sm mb-1">Misi & Kedatangan</h3>
-                        <p class="text-xs text-emerald-800 leading-relaxed">
-                            Beliau datang ke Jawa bersama rombongan ayahandanya untuk menyebarkan ajaran Islam. Terdapat legenda lokal bahwa kedatangan beliau merupakan misi diplomasi pernikahan guna mengislamkan penguasa setempat, namun beliau wafat di usia muda (sekitar 18 tahun) akibat wabah penyakit.
-                        </p>
-                    </div>
+        <section id="sejarah" class="px-4 mt-10">
+            <h2 class="text-xl font-bold mb-4 flex items-center text-emerald-900">
+                <i class="fas fa-history mr-2 text-emerald-600"></i> Sejarah Situs
+            </h2>
+            <div class="bg-white rounded-xl p-6 shadow-sm space-y-4">
+                <div class="w-full h-48 bg-gray-200 rounded-lg flex items-center justify-center text-gray-400 italic text-xs p-4 text-center">
+                    [Gambar: Inskripsi Kaligrafi Kufi Nisan Utama]
+                </div>
+                <p class="text-sm text-gray-600 leading-relaxed text-justify">
+                    Situs ini merupakan bukti arkeologis tertua mengenai keberadaan komunitas Muslim di Asia Tenggara. Prasasti pada nisan mencatat tanggal wafat beliau pada 7 Rajab 475 Hijriah (2 Desember 1082 M). Penulisan nisan menggunakan gaya Kufi, bukti pengaruh peradaban Islam awal di Jawa.
+                </p>
+            </div>
+        </section>
 
-                    <div>
-                        <h3 class="font-bold text-emerald-800 text-sm mb-2 uppercase tracking-wide">Signifikansi Sejarah</h3>
-                        <p class="text-sm text-gray-600 leading-relaxed">
-                            Makam beliau merupakan **bukti tertua keberadaan Islam di Asia Tenggara**. Inskripsi pada nisan mencatat wafat beliau pada **7 Rajab 475 H** (1082 M) dengan kaligrafi gaya **Kufi**. Beliau dimakamkan bersama 4 dayang setianya: **Putri Seruni, Keling, Kucing, dan Kamboja**.
-                        </p>
+        <section id="arsitektur" class="px-4 mt-10">
+            <h2 class="text-xl font-bold mb-4 flex items-center text-emerald-900">
+                <i class="fas fa-archway mr-2 text-emerald-600"></i> Arsitektur Cungkup
+            </h2>
+            <div class="bg-white rounded-xl p-6 shadow-sm space-y-4">
+                <div class="flex gap-4 items-center">
+                    <div class="w-1/3 h-24 bg-gray-200 rounded-lg flex items-center justify-center text-[8px] text-center p-2 text-gray-400">
+                        [Foto Detail Batu Kapur]
+                    </div>
+                    <div class="w-2/3">
+                        <h4 class="font-bold text-sm text-emerald-800">Akulturasi Budaya</h4>
+                        <p class="text-xs text-gray-500 italic leading-relaxed">Struktur bangunan menyerupai candi namun berfungsi sebagai makam Islam, dibangun menggunakan batu kapur putih khas daerah setempat.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="info" class="px-4 mt-10">
-            <div class="bg-emerald-900 rounded-2xl p-6 text-white shadow-lg">
-                <h3 class="font-bold text-lg mb-3 flex items-center">
-                    <i class="fas fa-pray mr-2 text-emerald-400"></i> Panduan Peziarah
+        <section id="makam-panjang" class="px-4 mt-10">
+            <h2 class="text-xl font-bold mb-4 flex items-center text-emerald-900">
+                <i class="fas fa-monument mr-2 text-emerald-600"></i> Misteri Makam Panjang
+            </h2>
+            <div class="bg-white rounded-xl p-6 shadow-sm border-b-4 border-emerald-500">
+                <p class="text-sm text-gray-700 leading-relaxed text-justify">
+                    Terdapat deretan makam dengan panjang mencapai 7–9 meter. Masyarakat meyakini mereka adalah para pengawal setia putri. Ukuran panjang ini merupakan bentuk penghormatan tinggi atas jasa mereka.
+                </p>
+                <div class="mt-4 w-full h-40 bg-gray-300 rounded-lg flex items-center justify-center text-gray-500 text-xs italic">
+                    [Video: Dokumentasi Makam Panjang]
+                </div>
+            </div>
+        </section>
+
+        <section class="px-4 mt-10">
+            <div class="bg-amber-50 border border-amber-200 rounded-xl p-5 shadow-sm">
+                <h3 class="font-bold text-amber-800 mb-3 text-sm flex items-center">
+                    <i class="fas fa-info-circle mr-2"></i> PANDUAN PEZIARAH
                 </h3>
-                <ul class="text-sm space-y-3 opacity-90">
-                    <li class="flex items-start">
-                        <i class="fas fa-check-circle mr-2 mt-1 text-emerald-400"></i>
-                        <span>Gunakan pakaian sopan dan menutup aurat.</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-check-circle mr-2 mt-1 text-emerald-400"></i>
-                        <span>Menjaga ketenangan dan kebersihan area makam.</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-check-circle mr-2 mt-1 text-emerald-400"></i>
-                        <span>Dilarang mengambil foto/video di area tertentu sesuai instruksi juru kunci.</span>
-                    </li>
+                <ul class="text-xs text-amber-900 space-y-2 font-medium">
+                    <li class="flex items-start"><i class="fas fa-check-circle mr-2 mt-0.5 opacity-50"></i> Berpakaian sopan dan menutup aurat.</li>
+                    <li class="flex items-start"><i class="fas fa-check-circle mr-2 mt-0.5 opacity-50"></i> Menjaga ketenangan di area utama.</li>
+                    <li class="flex items-start"><i class="fas fa-check-circle mr-2 mt-0.5 opacity-50"></i> Tidak membuang sampah sembarangan.</li>
                 </ul>
             </div>
         </section>
 
     </main>
 
-    <footer class="bg-white border-t border-gray-200 py-10 px-6 text-center">
-        <p class="text-[10px] text-gray-400 uppercase font-black mb-4 tracking-[0.2em]">Program Kerja KKN 2025</p>
-        <div class="flex justify-center space-x-6 mb-6">
-            <span class="text-xs font-bold text-gray-400">Universitas Trunojoyo Madura</span>
-            <span class="text-xs font-bold text-gray-400">Desa Leran, Gresik</span>
-        </div>
-        <p class="text-[10px] text-gray-300 italic">"Digitalisasi Sejarah untuk Kelestarian Budaya"</p>
+    <footer class="bg-gray-900 text-white py-12 px-6 text-center border-t border-emerald-800">
+        <p class="text-[10px] text-gray-500 uppercase tracking-[0.3em] font-black mb-4">Program Kerja KKN 2025</p>
+        <p class="text-xs opacity-60 font-light italic">"Digitalisasi Sejarah Desa Leran untuk Masa Depan"</p>
+        <p class="text-[10px] mt-4 text-emerald-500 font-bold uppercase">Universitas Trunojoyo Madura</p>
     </footer>
 
-    <a href="#home" class="fixed bottom-6 right-6 bg-emerald-600 text-white w-12 h-12 rounded-full shadow-2xl flex items-center justify-center z-50 hover:bg-emerald-700 transition">
+    <a href="#home" class="fixed bottom-6 right-6 bg-emerald-600 text-white w-12 h-12 rounded-full shadow-2xl flex items-center justify-center z-50 hover:bg-emerald-700 transition transform hover:scale-110">
         <i class="fas fa-arrow-up"></i>
     </a>
 
