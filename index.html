@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Situs Sejarah Leran - Digital Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Tambahkan selector 'html' di sini */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .glass-effect { 
+            background: rgba(255, 255, 255, 0.9); 
+            backdrop-filter: blur(10px); 
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 antialiased">
+
+    <nav class="sticky top-0 z-50 glass-effect border-b border-gray-200">
+        <div class="max-w-screen-md mx-auto px-4 py-3 flex justify-between items-center">
+            <span class="font-bold text-emerald-800 text-lg">LeranDigital</span>
+            <div class="space-x-4 overflow-x-auto whitespace-nowrap text-sm font-medium">
+                <a href="#home" class="text-emerald-700">Home</a>
+                <a href="#sejarah" class="text-gray-500">Sejarah</a>
+                <a href="#arsitektur" class="text-gray-500">Arsitektur</a>
+                <a href="#makam-panjang" class="text-gray-500">Makam Panjang</a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="home" class="max-w-screen-md mx-auto pb-20">
+
+        <section class="relative h-64 bg-emerald-900 flex items-center justify-center text-center px-6">
+            <div class="absolute inset-0 bg-black opacity-40"></div>
+            <div class="relative z-10">
+                <h1 class="text-3xl font-extrabold text-white mb-2">Siti Fatimah binti Maimun</h1>
+                <p class="text-emerald-100 italic text-sm">Menelusuri Jejak 1082 M di Tanah Jawa</p>
+            </div>
+        </section>
+
+        <section class="px-4 -mt-10 relative z-20">
+            <div class="bg-white rounded-2xl shadow-xl p-6 flex items-center justify-between border-l-8 border-emerald-500">
+                <div>
+                    <h3 class="font-bold text-lg">Audio Guide</h3>
+                    <p class="text-xs text-gray-500">Dengarkan sejarah sambil berkeliling</p>
+                </div>
+                <button class="bg-emerald-600 hover:bg-emerald-700 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition">
+                    <i class="fas fa-play"></i>
+                </button>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-2 gap-4 px-4 mt-6">
+            <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                <p class="text-xs text-gray-400 uppercase font-bold">Tahun Wafat</p>
+                <p class="text-xl font-bold text-emerald-700">1082 M</p>
+            </div>
+            <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                <p class="text-xs text-gray-400 uppercase font-bold">Status Situs</p>
+                <p class="text-sm font-bold text-emerald-700">Cagar Budaya Nasional</p>
+            </div>
+        </section>
+
+        <section id="sejarah" class="px-4 mt-10">
+            <h2 class="text-xl font-bold mb-4 flex items-center">
+                <i class="fas fa-history mr-2 text-emerald-600"></i> Sejarah Singkat
+            </h2>
+            <div class="bg-white rounded-xl p-5 shadow-sm space-y-4">
+                <div class="w-full h-48 bg-gray-200 rounded-lg flex items-center justify-center text-gray-400 italic">
+                    [Gambar: Ilustrasi/Foto Nisan Utama]
+                </div>
+                <p class="leading-relaxed text-gray-600">
+                    Siti Fatimah binti Maimun adalah seorang putri bangsawan yang wafat pada tahun 1082 M (475 Hijriah). Makam ini merupakan bukti arkeologis paling awal tentang keberadaan Islam di Nusantara, jauh sebelum era Wali Songo.
+                </p>
+            </div>
+        </section>
+
+        <section id="arsitektur" class="px-4 mt-10">
+            <h2 class="text-xl font-bold mb-4 flex items-center">
+                <i class="fas fa-archway mr-2 text-emerald-600"></i> Arsitektur Cungkup
+            </h2>
+            <div class="bg-white rounded-xl p-5 shadow-sm space-y-4">
+                <div class="flex gap-4">
+                    <div class="w-1/3 h-24 bg-gray-200 rounded-lg flex items-center justify-center text-[10px] text-center p-2 text-gray-400">
+                        [Foto Detail Batu Kapur]
+                    </div>
+                    <div class="w-2/3">
+                        <h4 class="font-bold text-sm">Gaya Akulturasi</h4>
+                        <p class="text-xs text-gray-500 italic">Perpaduan pengaruh Timur Tengah dan lokal Jawa terlihat dari struktur bangunan yang menyerupai candi namun menggunakan material batu kapur putih.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="makam-panjang" class="px-4 mt-10">
+            <h2 class="text-xl font-bold mb-4 flex items-center">
+                <i class="fas fa-monument mr-2 text-emerald-600"></i> Misteri Makam Panjang
+            </h2>
+            <div class="bg-white rounded-xl p-5 shadow-sm bg-emerald-50 border border-emerald-100">
+                <p class="text-sm text-gray-700 leading-relaxed">
+                    Terdapat deretan makam dengan panjang mencapai 9 meter. Secara tutur masyarakat, mereka adalah para pengawal setia putri. Secara simbolis, ukuran panjang ini menunjukkan penghormatan yang sangat tinggi terhadap jasa-jasa mereka di masa lalu.
+                </p>
+                <div class="mt-4 w-full h-40 bg-gray-300 rounded-lg flex items-center justify-center text-gray-500">
+                    [Video: Suasana Makam Panjang]
+                </div>
+            </div>
+        </section>
+
+        <section class="px-4 mt-10">
+            <div class="bg-amber-50 border border-amber-200 rounded-xl p-5">
+                <h3 class="font-bold text-amber-800 mb-2"><i class="fas fa-info-circle mr-1"></i> Panduan Peziarah</h3>
+                <ul class="text-sm text-amber-900 space-y-2">
+                    <li>• Jaga ketenangan di area utama makam.</li>
+                    <li>• Berpakaian sopan dan menutup aurat.</li>
+                    <li>• Tidak meninggalkan sampah di area situs.</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-900 text-white py-10 px-6 text-center">
+        <p class="text-sm opacity-60">Digitalisasi Sejarah Desa Leran</p>
+        <p class="text-xs mt-2 font-light italic text-emerald-400">Dikelola oleh Tim KKN Universitas [Nama Kampus] 2025</p>
+    </footer>
+
+</body>
+</html>
